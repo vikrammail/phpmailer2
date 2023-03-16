@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="typwriter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>.button {
+            background-color: rgb(37, 11, 132);
+            padding: 4px 10px;
+            cursor: pointer;
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-weight: 700;
+            width: fit-content;
+          }
+          
+          .button:hover {
+            background-color: white;
+            color: rgb(18, 155, 155);
+            border: 1px solid black;
+          }</style>
+    </head>
+    <body>
+        <p id="button">vk</p>
+        <button class="buttn">button</button>
+        <script >
+            let title = document.getElementById("button");
+            // title.innerHTML = 'dfd';
+            let name = "vikram";
+            let index = 1;
+
+            const typwriter = () => {
+                let newtitle = name.slice(0,index);
+                title.innerText = newtitle;
+
+                index > name.length ? index = 1 : index++;
+
+                setTimeout(typwriter, 1000);
+            }
+            typwriter();
+        </script>
+    </body>
+</html>
